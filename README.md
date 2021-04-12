@@ -33,6 +33,7 @@ Once you have the data you'll have a **.csv** file and an **"IMG"** folder, just
 After that train running model.py:
 - `$ python model.py`
 <img src="images/udacity1.JPG">
+
 ## To play your trained model
 Play running play.py followed by the trained model name:
 - `$ python play.py navigateAI.h5`
