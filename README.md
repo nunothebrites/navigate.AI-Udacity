@@ -30,7 +30,7 @@
 You need to have data, you can **gather it youself by playing** on the simulator in "Training Mode" using "W, A, S, D". Or you can use [the one provided by Udacity](https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip "the one provided by Udacity") to train your network.
 Once you have the data you'll have a **.csv** file and an **"IMG"** folder, just put the .csv inside the **"data"** folder located in the **repo folder**, and **don't move the "IMG" folder** or else you'll have to put it where it was, or change all the images path inside the .csv file.
 
-After that train running model.py:
+After that, train running model.py:
 - `$ python model.py`
 <img src="images/udacity1.JPG">
 
