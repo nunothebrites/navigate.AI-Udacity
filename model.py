@@ -46,15 +46,15 @@ def build_model(args):
     """
     NVIDIA model used
     Image normalization to avoid saturation and make gradients work better.
-    Convolution: 5x5, filter: 24, strides: 2x2, activation: ELU
-    Convolution: 5x5, filter: 36, strides: 2x2, activation: ELU
-    Convolution: 5x5, filter: 48, strides: 2x2, activation: ELU
-    Convolution: 3x3, filter: 64, strides: 1x1, activation: ELU
-    Convolution: 3x3, filter: 64, strides: 1x1, activation: ELU
+    Convolution: 5x5, filter: 24, strides: 2x2, activation: RELU
+    Convolution: 5x5, filter: 36, strides: 2x2, activation: RELU
+    Convolution: 5x5, filter: 48, strides: 2x2, activation: RELU
+    Convolution: 3x3, filter: 64, strides: 1x1, activation: RELU
+    Convolution: 3x3, filter: 64, strides: 1x1, activation: RELU
     Drop out (0.5)
-    Fully connected: neurons: 100, activation: ELU
-    Fully connected: neurons: 50, activation: ELU
-    Fully connected: neurons: 10, activation: ELU
+    Fully connected: neurons: 100, activation: RELU
+    Fully connected: neurons: 50, activation: RELU
+    Fully connected: neurons: 10, activation: RELU
     Fully connected: neurons: 1 (output)
 
     # the convolution layers are meant to handle feature engineering
@@ -77,22 +77,7 @@ def build_model(args):
     model.add(Dense(10, activation='relu'))
     model.add(Dense(1))
     model.summary()
-    """
-    model = Sequential()
 
-    model.add(Conv2D(64, (3, 3), input_shape=INPUT_SHAPE, padding='same'))
-    model.add(Activation('relu'))
-    model.add(AveragePooling2D(pool_size=(5, 5), strides=(3, 3), padding='same'))
-
-    model.add(Conv2D(64, (3, 3), padding='same'))
-    model.add(Activation('relu'))
-    model.add(AveragePooling2D(pool_size=(5, 5), strides=(3, 3), padding='same'))
-
-    model.add(Conv2D(64, (3, 3), padding='same'))
-    model.add(Activation('relu'))
-    model.add(AveragePooling2D(pool_size=(5, 5), strides=(3, 3), padding='same'))
-
-    model.add(Flatten())"""
     return model
 
 
